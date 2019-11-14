@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+    <form action="" method="post">
+        <p>Are you sure you want to Delete <strong> {{ user.username }} </strong> user?</p>
+        <a href="/user/{{ user.username }}/">Back</a>
+        <button class="input submit" type="submit">Submit</button>
+    </form>
+</div>
+{% endblock content %}

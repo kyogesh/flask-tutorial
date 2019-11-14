@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% if form.errors %}
+    {{ form.errors }}
+{% endif %}
+<div class="container">
+<!--    {% with messages = get_flashed_messages(with_categories=true) %}-->
+<!--        {% if messages %}-->
+<!--            {% for message in messages %}-->
+<!--                <div>-->
+<!--                {{ message[1] }}-->
+<!--                </div>-->
+<!--            {% endfor %}-->
+<!--        {% endif %}-->
+<!--    {% endwith %}-->
+    <form action="" method="post">
+        <div class="form-group">
+            {{ form.first_name.label }} {{ form.first_name(class="form-control", placeholder="First Name")}}
+            {{ form.last_name.label }} {{ form.last_name(class="form-control", placeholder="Last Name")}}
+            {{ form.username.label }} {{ form.username(class="form-control", placeholder="Username")}}
+        </div>
+        <div class="input submit">
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+</div>
+{% endblock %}
